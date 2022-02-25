@@ -2,12 +2,14 @@ package square
 
 import "math"
 
-type Sides byte
+type Sides int
 
 const (
-	SidesCircle Sides  = 0
-	SidesTriangle Sides = 3
-	SidesSquare Sides = 4
+	SidesCircle Sides  = iota
+	_
+	_
+	SidesTriangle
+	SidesSquare
 )
 func CalcSquare(sideLen float64, sidesNum Sides) float64 {
 
