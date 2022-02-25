@@ -2,7 +2,7 @@ package square
 
 import "math"
 
-type Sides int
+type Sides byte
 
 func CalcSquare(sideLen float64, sidesNum Sides) float64 {
 
