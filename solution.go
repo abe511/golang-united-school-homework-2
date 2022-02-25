@@ -13,13 +13,14 @@ func CalcSquare(sideLen float64, sidesNum Sides) float64 {
 		SidesTriangle
 		SidesSquare
 	)
-	
-	if sidesNum == SidesCircle {
+	switch sidesNum {
+	case SidesCircle:
 		return math.Pi * (sideLen * sideLen)
-	} else if sidesNum == SidesTriangle {
-		return (math.Sqrt(3) / 4) * (sideLen * sideLen)
-	} else if sidesNum == SidesSquare {
+	case SidesTriangle:
+		return (math.Sqrt(3) * 0.25) * (sideLen * sideLen)
+	case SidesSquare:
 		return sideLen * sideLen
+	default:
+		return 0
 	}
-	return 0
 }
