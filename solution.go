@@ -2,7 +2,7 @@ package square
 
 import "math"
 
-type Sides int
+type Sides byte
 
 const (
 	SidesCircle Sides  = 0
